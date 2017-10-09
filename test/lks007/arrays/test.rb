@@ -4,8 +4,6 @@ require_relative './solution.rb'
 class Lks007::ArraysTest < Minitest::Test
   # Найти длинну максимального промежутка с повторяющимися значениями
   def test_max_repeat
-    skip
-
     assert Lks007::Arrays.max_repeat([1]) == 0
     assert Lks007::Arrays.max_repeat([1, 1]) == 2
     assert Lks007::Arrays.max_repeat([1, 1, 2, 2, 2, 4, 5, 6, 6, 6, 6, 1, 3, 4, 5, 5]) == 4

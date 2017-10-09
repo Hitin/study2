@@ -5,7 +5,7 @@ module Makapoxa
         arr_res = {}
         interval_val = ''
         i = 0
-        array.each_with_index do |el|
+        array.each do |el|
           if el == interval_val
             arr_res[i] += 1
           else
