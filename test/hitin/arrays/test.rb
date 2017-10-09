@@ -17,7 +17,6 @@ class Hitin::ArraysTest < Minitest::Test
   # Реализовать бинарный поиск
   # Функция должна возвращать индекс элемента
   def test_bin_search
-    skip
     assert Hitin::Arrays.search([1], 900) == -1
     assert Hitin::Arrays.search([1], 1) == 0
     assert Hitin::Arrays.search([], 900) == -1
