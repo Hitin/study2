@@ -19,7 +19,27 @@ module Makapoxa
       end
 
       def search(array, query)
-        0
+        first_ind = 0
+        last_ind = array.size - 1
+        diff = last_ind - first_ind
+        result = 0
+        while diff > 1
+          mid = (first_ind + last_ind) / 2
+          if query > array[mid]
+            first_ind = mid
+          elsif query < array[mid]
+            last_ind = mid
+          elsif query == array[mid]
+            return mid
+          end
+          diff = last_ind - first_ind
+        end
+        case query
+          when array[first_ind] then result = first_ind
+          when array[last_ind] then result = last_ind 
+          else result = -1
+        end 
+        result
       end
     end
   end
