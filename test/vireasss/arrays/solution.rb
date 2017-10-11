@@ -3,13 +3,7 @@ module Vireasss
     class << self
       def replace(array)
         min = array.min
-        arr = []
-        array.each {|val| val < 0 ? arr << min : arr << val}
-        arr
-      end
-
-      def search(array, query)
-        0
+        array.map { |val| val < 0 ? min : val }
       end
     end
   end
