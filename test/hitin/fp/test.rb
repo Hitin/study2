@@ -17,7 +17,6 @@ class Hitin::FpTest < Minitest::Test
 
   # Посчитать количесвто цифр в названиях всех фильмов за определенный год
   def test_chars_count
-    skip
     array = CSV.readlines('./test/fixtures/films.csv', headers: true)
 
     result = Hitin::Fp.chars_count(array, 2003)

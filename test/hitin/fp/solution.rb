@@ -12,7 +12,8 @@ module Hitin
 
       def chars_count(films, year)
         chars = []
-        films.each { |film| chars << film['name'] if film['year'] == year.to_s }
+        films.each { |film| chars << film['name'].scan(/[0-9]/) if film['year'] == year.to_s }
+        chars.flatten!.length
       end
     end
   end
