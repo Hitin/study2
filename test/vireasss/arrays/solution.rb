@@ -3,7 +3,7 @@ module Vireasss
     class << self
       def replace(array)
         min = array.min
-        array.map { |val| val < 0 ? min : val }
+        array.map { |val| val.negative? ? min : val }
       end
     end
   end

@@ -12,17 +12,16 @@ module Makapoxa
             i += 1
             arr_res[i] = 1
           end
-          interval_val = el         
+          interval_val = el
         end
-        arr_res.delete_if {|k,v| v < 2} 
-        arr_res.empty? ? 0 : arr_res.values.min      
+        arr_res.delete_if { |_, v| v < 2 }
+        arr_res.empty? ? 0 : arr_res.values.min
       end
 
       def search(array, query)
         first_ind = 0
         last_ind = array.size - 1
         diff = last_ind - first_ind
-        result = 0
         while diff > 1
           mid = (first_ind + last_ind) / 2
           if query > array[mid]
@@ -35,11 +34,10 @@ module Makapoxa
           diff = last_ind - first_ind
         end
         case query
-          when array[first_ind] then result = first_ind
-          when array[last_ind] then result = last_ind 
-          else result = -1
-        end 
-        result
+        when array[first_ind] then first_ind
+        when array[last_ind] then last_ind
+        else -1
+        end
       end
     end
   end

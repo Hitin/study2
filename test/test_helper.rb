@@ -6,6 +6,5 @@ require 'minitest/autorun'
 
 Coveralls.wear!
 
-
 class Minitest::Test
 end

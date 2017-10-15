@@ -3,13 +3,7 @@ module Vampir135
     class << self
       def replace(array)
         max = array.max
-        arr = []
-        array.each {|val| val > 0 ? arr << max : arr << val}
-        arr 
-      end
-
-      def search(array, query)
-        0
+        array.map { |val| val.positive? ? max : val }
       end
     end
   end
